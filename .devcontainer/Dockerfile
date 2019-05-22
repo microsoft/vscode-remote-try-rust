@@ -8,11 +8,16 @@ FROM rust:1
 # Copy endpoint specific user setting overrides into container
 COPY settings.vscode.json /root/.vscode-remote/data/Machine/settings.json
 
-RUN rustup update
-RUN rustup component add rls rust-analysis rust-src
+RUN rustup update 2>&1
+RUN rustup component add rls rust-analysis rust-src 2>&1
 
-# Install git, process tools
-RUN apt-get update && apt-get -y install git procps
+# Configure apt
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update \
+    && apt-get -y install --no-install-recommends apt-utils 2>&1
+
+# Install git, process tools, lsb-release (common in install instructions for CLIs)
+RUN apt-get -y install git procps lsb-release
 
 # Install other dependencies
 RUN apt-get install -y lldb-3.9
@@ -21,3 +26,7 @@ RUN apt-get install -y lldb-3.9
 RUN apt-get autoremove -y \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
+ENV DEBIAN_FRONTEND=dialog
+
+# Set the default shell to bash rather than sh
+ENV SHELL /bin/bash
