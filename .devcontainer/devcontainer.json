@@ -10,5 +10,8 @@
 		"--cap-add=SYS_PTRACE",
 		"--security-opt",
 		"seccomp=unconfined"
-	]
+	],
+	"settings": {
+		"lldb.executable": "/usr/bin/lldb-3.9"
+	}
 }
