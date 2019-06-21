@@ -12,6 +12,7 @@
 		"seccomp=unconfined"
 	],
 	"settings": {
-		"lldb.executable": "/usr/bin/lldb-3.9"
+		"lldb.executable": "/usr/bin/lldb-3.9",
+		"terminal.integrated.shell.linux": "/bin/bash"
 	}
 }
