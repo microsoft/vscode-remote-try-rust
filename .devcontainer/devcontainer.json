@@ -15,6 +15,7 @@
 	],
 	"settings": {
 		"lldb.adapterType": "bundled",
+		"lldb.executable": "/usr/bin/lldb",
 		"terminal.integrated.shell.linux": "/bin/bash"
 	}
 }
