@@ -1,11 +1,7 @@
 {
 	"name": "Rust",
 	"dockerFile": "Dockerfile",
-	"extensions": [
-		"rust-lang.rust",
-		"bungcip.better-toml",
-		"vadimcn.vscode-lldb"
-	],
+
 	"runArgs": [
 		// Comment out the next line to run as root instead. Linux users, 
 		// update Dockerfile with your user's UID/GID if not 1000.
@@ -13,9 +9,24 @@
 
 		"--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"
 	],
-	"settings": {
+
+	// Use 'settings' to set *default* container specific settings.json values on container create. 
+	// You can edit these settings after create using File > Preferences > Settings > Remote.
+	"settings": { 
 		"lldb.adapterType": "bundled",
 		"lldb.executable": "/usr/bin/lldb",
 		"terminal.integrated.shell.linux": "/bin/bash"
-	}
+	},
+
+	// Uncomment the next line if you want to publish any ports.
+	// "appPort": [],
+
+	// Uncomment the next line to run commands after the container is created.
+	// "postCreateCommand": "rustc --version"
+
+	"extensions": [
+		"rust-lang.rust",
+		"bungcip.better-toml",
+		"vadimcn.vscode-lldb"
+	]
 }
