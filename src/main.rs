@@ -3,7 +3,17 @@
  * Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.
  *-------------------------------------------------------------------------------------------------------------*/
 
+use std::io;
+
 fn main() {
-    let name = "VS Code Remote - Containers";
-    println!("Hello, {}!", name);
+    println!("Guess the 番号!");
+    println!("Please input your guess.");
+
+    let mut guess = String::new();
+
+    io::stdin()
+        .read_line(&mut guess)
+        .expect("Failed to read line");
+
+    println!("You guessed: {}", guess);
 }
