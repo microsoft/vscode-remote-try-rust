@@ -1,17 +1,14 @@
-use rand::Rng;
 use std::cmp::Ordering;
-use std::io;
+
+mod generate;
+mod input;
 
 pub fn guess_game() {
     println!("Guess the 番号!");
-    let secret_num = rand::thread_rng().gen_range(1..101);
+    let secret_num = generate::generate_secret_num();
     println!("The secret number is: {}", secret_num);
     println!("Please input your guess.");
-    let mut guess = String::new();
-    io::stdin()
-        .read_line(&mut guess)
-        .expect("Failed to read line");
-    let guess: u32 = guess.trim().parse().expect("Please type a number!");
+    let guess = input::input_guess();
     println!("You guessed: {}", guess);
     match guess.cmp(&secret_num) {
         Ordering::Less => println!("Too small!"),
