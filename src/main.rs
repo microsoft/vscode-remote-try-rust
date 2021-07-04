@@ -6,5 +6,6 @@
 mod tutorial;
 
 fn main() {
-    tutorial::guess_game::start();
+    //    tutorial::guess_game::start();
+    tutorial::ownership::start();
 }
