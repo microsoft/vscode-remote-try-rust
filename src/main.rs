@@ -6,5 +6,5 @@
 mod tutorial;
 
 fn main() {
-    tutorial::guess_game();
+    tutorial::guess_game::start();
 }
