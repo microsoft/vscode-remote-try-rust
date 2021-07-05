@@ -16,8 +16,7 @@ fn main() {
     match args[1].as_str() {
         "guess" => tutorial::guess_game::start(),
         "ownership" => tutorial::ownership::start(),
-    //    tutorial::guess_game::start();
-    tutorial::ownership::start();
+        "structure" => tutorial::structure::start(),
         _ => process::exit(2),
     }
 }
