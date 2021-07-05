@@ -1,4 +1,3 @@
-
 {
     "version": "0.2.0",
     "configurations": [
@@ -17,7 +16,9 @@
                     "kind": "bin"
                 }
             },
-            "args": []
+            "args": [
+                "structure"
+            ]
         }
     ]
 }
