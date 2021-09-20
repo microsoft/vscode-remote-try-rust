@@ -2,6 +2,7 @@
 name = "hello_remote_world"
 version = "0.1.0"
 authors = ["VS Code <vscode@microsoft.com>"]
+edition = "2018"
 
 [lib]
 path ="./src/lib/lib.rs"
