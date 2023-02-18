@@ -1,6 +1,5 @@
 {
-    "search.exclude": {
-        "**/target": true
+    "search.exclude": {exclude remote users
     },
-    "lldb.verboseLogging": true
+    "lldb.verboseLogging": false
 }
