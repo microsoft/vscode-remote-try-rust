@@ -39,6 +39,11 @@ Follow these steps to open this sample in a container using the VS Code Dev Cont
 
 ## Things to try
 
+### Toolchain
+
+This sample uses the stable Rust toolchain on Debian 13 (Trixie) and the Rust 2024 edition.
+Run `cargo test` and `cargo clippy -- -D warnings` to check the project, then `cargo run` to run it.
+
 Once you have this sample opened, you'll be able to work with it like you would locally.
 
 Some things to try:
@@ -47,7 +52,7 @@ Some things to try:
    - Open `main.rs`
    - Try adding some code and check out the language features.
    - Make a spelling mistake and notice it is detected. The [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) extension was automatically installed because it is referenced in `.devcontainer/devcontainer.json`.
-   - Also notice that utilities like `rls` and the [Rust Analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer) extension are installed. Tools are installed in the `mcr.microsoft.com/devcontainers/rust` image and Dev Container settings and metadata are automatically picked up from [image labels](https://containers.dev/implementors/reference/#labels).
+   - Also notice that utilities like `rustfmt`, `clippy`, and the [Rust Analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer) extension are installed. Tools are installed in the `mcr.microsoft.com/devcontainers/rust` image and Dev Container settings and metadata are automatically picked up from [image labels](https://containers.dev/implementors/reference/#labels).
 
 1. **Terminal:** Press <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>\`</kbd> and type `uname` and other Linux commands from the terminal window.
 
